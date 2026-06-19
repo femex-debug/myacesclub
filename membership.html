@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Membership — ACES Club</title>
+  <meta name="description" content="Join ACES Club with a monthly or yearly membership plan.">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- ── NAVIGATION ── -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-brand">
+      <div class="nav-logo">A</div>
+      <span class="nav-name">ACES Club</span>
+    </a>
+    <div class="nav-links" id="nav-links">
+      <a href="../index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="membership.html" class="nav-link active">Membership</a>
+      <a href="rankings.html" class="nav-link">Rankings</a>
+      <a href="events.html" class="nav-link">Events</a>
+      <a href="gallery.html" class="nav-link">Gallery</a>
+      <a href="outreach.html" class="nav-link">Outreach</a>
+      <a href="lessons.html" class="nav-link">Lessons</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <a href="auth.html" class="btn btn-sm btn-secondary">Log In</a>
+      <a href="auth.html#register" class="btn btn-sm btn-primary">Join</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── MEMBERSHIP TIERS ── -->
+<section class="section">
+  <div class="container text-center">
+    <p class="section-label">Membership</p>
+    <h2>Choose Your Plan</h2>
+    <p class="section-sub">Select the membership tier that works best for you.</p>
+    <div class="grid-2" style="margin-top:40px;align-items:start">
+
+      <!-- Monthly -->
+      <div class="card" style="padding:32px;text-align:left">
+        <h3>Monthly</h3>
+        <p style="font-size:32px;font-weight:700;margin:12px 0">$30<span style="font-size:16px;font-weight:400">/mo</span></p>
+        <ul style="list-style:none;padding:0;margin:20px 0;line-height:2">
+          <li>Access to regular club play</li>
+          <li>Tournament eligibility</li>
+          <li>Club rankings</li>
+          <li>10% merch discount</li>
+          <li>Beginner training weekly</li>
+        </ul>
+        <div id="paypal-monthly"></div>
+      </div>
+
+      <!-- Yearly -->
+      <div class="card" style="padding:32px;text-align:left;border:2px solid var(--gold)">
+        <span style="background:var(--gold);color:var(--green-darker);font-size:12px;font-weight:700;padding:4px 10px;border-radius:4px;text-transform:uppercase">BEST VALUE</span>
+        <h3 style="margin-top:12px">Yearly</h3>
+        <p style="font-size:32px;font-weight:700;margin:12px 0">$300<span style="font-size:16px;font-weight:400">/yr</span></p>
+        <ul style="list-style:none;padding:0;margin:20px 0;line-height:2">
+          <li>Priority tournament access</li>
+          <li>Indoor court priority (winter)</li>
+          <li>Free merch item</li>
+          <li>8 weeks free training</li>
+          <li>25% merch discount</li>
+          <li>2 guest passes/yr</li>
+          <li>Leadership eligibility</li>
+          <li>First access to limited events</li>
+        </ul>
+        <div id="paypal-yearly"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">ACES CLUB</div>
+        <p class="footer-desc">Promoting sportsmanship, community engagement, and an active lifestyle through tennis in Laurel, Maryland.</p>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <ul class="footer-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="membership.html">Membership</a></li>
+          <li><a href="rankings.html">Rankings</a></li>
+          <li><a href="events.html">Events</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Club</h4>
+        <ul class="footer-links">
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="outreach.html">Outreach</a></li>
+          <li><a href="lessons.html">Private Lessons</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li>info@myacesclub.com</li>
+          <li>Laurel, Maryland</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 ACES Club Inc. All rights reserved.</span>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/acestennisclub_" target="_blank">IG</a>
+        <a href="https://www.facebook.com" target="_blank">FB</a>
+        <a href="https://twitter.com/" target="_blank">X</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/nav.js"></script>
+<script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+</body>
+</html>

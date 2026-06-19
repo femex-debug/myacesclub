@@ -1,0 +1,52 @@
+[build]
+  publish = "/"
+
+[[redirects]]
+  from = "/rankings"
+  to = "/pages/rankings.html"
+  status = 200
+
+[[redirects]]
+  from = "/about"
+  to = "/pages/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/membership"
+  to = "/pages/membership.html"
+  status = 200
+
+[[redirects]]
+  from = "/events"
+  to = "/pages/events.html"
+  status = 200
+
+[[redirects]]
+  from = "/gallery"
+  to = "/pages/gallery.html"
+  status = 200
+
+[[redirects]]
+  from = "/outreach"
+  to = "/pages/outreach.html"
+  status = 200
+
+[[redirects]]
+  from = "/lessons"
+  to = "/pages/lessons.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/pages/contact.html"
+  status = 200
+
+[[redirects]]
+  from = "/login"
+  to = "/pages/auth.html"
+  status = 200
+
+[[redirects]]
+  from = "/register"
+  to = "/pages/auth.html#register"
+  status = 200

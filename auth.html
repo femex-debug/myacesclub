@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log In — ACES Club</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .auth-wrap { max-width: 420px; margin: 60px auto; padding: 0 20px; }
+    .auth-box { background: var(--card-bg, #fff); border: 1px solid var(--border, #e0e0e0); border-radius: 16px; padding: 32px; }
+    .auth-tabs { display: flex; gap: 0; margin-bottom: 24px; border-bottom: 2px solid var(--border, #e0e0e0); }
+    .auth-tab { flex: 1; padding: 12px; text-align: center; background: none; border: none; font-size: 14px; font-weight: 600; cursor: pointer; color: var(--muted, #888); border-bottom: 2px solid transparent; margin-bottom: -2px; }
+    .auth-tab.active { color: var(--green, #1a7a4c); border-bottom-color: var(--green, #1a7a4c); }
+    .auth-form { display: none; }
+    .auth-form.active { display: block; }
+    .auth-form label { display: block; font-size: 13px; font-weight: 500; margin-bottom: 12px; }
+    .auth-form input, .auth-form select { width: 100%; padding: 10px 12px; border: 1px solid var(--border, #ddd); border-radius: 8px; font-size: 14px; margin-top: 4px; box-sizing: border-box; }
+    .auth-form button[type="submit"] { width: 100%; padding: 12px; background: var(--green, #1a7a4c); color: #fff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; margin-top: 16px; }
+    .auth-msg { font-size: 13px; margin-top: 12px; padding: 8px 12px; border-radius: 6px; display: none; }
+    .auth-msg.error { display: block; background: #fdecea; color: #c0392b; }
+    .auth-msg.success { display: block; background: #e8f8f0; color: #1a7a4c; }
+  </style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-brand">
+      <div class="nav-logo">A</div>
+      <span class="nav-name">ACES Club</span>
+    </a>
+    <div class="nav-links" id="nav-links">
+      <a href="../index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="membership.html" class="nav-link">Membership</a>
+      <a href="rankings.html" class="nav-link">Rankings</a>
+      <a href="events.html" class="nav-link">Events</a>
+      <a href="gallery.html" class="nav-link">Gallery</a>
+      <a href="outreach.html" class="nav-link">Outreach</a>
+      <a href="lessons.html" class="nav-link">Lessons</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <a href="auth.html" class="btn btn-sm btn-secondary">Log In</a>
+      <a href="auth.html#register" class="btn btn-sm btn-primary">Join</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="auth-wrap">
+  <div class="auth-box">
+    <div class="auth-tabs">
+      <button class="auth-tab active" data-form="login">Log In</button>
+      <button class="auth-tab" data-form="register">Register</button>
+    </div>
+
+    <form id="login-form" class="auth-form active">
+      <label>Email <input type="email" id="login-email" required></label>
+      <label>Password <input type="password" id="login-password" required></label>
+      <button type="submit">Log In</button>
+      <div id="login-msg" class="auth-msg"></div>
+    </form>
+
+    <form id="register-form" class="auth-form">
+      <label>Name <input type="text" id="reg-name" required></label>
+      <label>Email <input type="email" id="reg-email" required></label>
+      <label>Password <input type="password" id="reg-password" required minlength="6"></label>
+      <label>Skill Level
+        <select id="reg-skill" required>
+          <option value="beginner">Beginner</option>
+          <option value="experienced">Experienced</option>
+        </select>
+      </label>
+      <button type="submit">Register</button>
+      <div id="reg-msg" class="auth-msg"></div>
+    </form>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">ACES CLUB</div>
+        <p class="footer-desc">Promoting sportsmanship, community engagement, and an active lifestyle through tennis in Laurel, Maryland.</p>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <ul class="footer-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="membership.html">Membership</a></li>
+          <li><a href="rankings.html">Rankings</a></li>
+          <li><a href="events.html">Events</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Club</h4>
+        <ul class="footer-links">
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="outreach.html">Outreach</a></li>
+          <li><a href="lessons.html">Private Lessons</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li>info@myacesclub.com</li>
+          <li>Laurel, Maryland</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 ACES Club Inc. All rights reserved.</span>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/acestennisclub_" target="_blank">IG</a>
+        <a href="https://www.facebook.com" target="_blank">FB</a>
+        <a href="https://twitter.com/" target="_blank">X</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/nav.js"></script>
+<script type="module">
+  import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js';
+  import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js';
+  import { getFirestore, doc, getDoc, setDoc } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js';
+
+  const app = initializeApp({
+    apiKey: 'AIzaSyBUTat80RVdSfL-XZXQ6vCzmEK-lpnviuw',
+    authDomain: 'aces-club-leaderboard.firebaseapp.com',
+    projectId: 'aces-club-leaderboard'
+  });
+  const auth = getAuth(app);
+  const db = getFirestore(app);
+
+  // Tab switching
+  const tabs = document.querySelectorAll('.auth-tab');
+  const forms = document.querySelectorAll('.auth-form');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      forms.forEach(f => f.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById(tab.dataset.form + '-form').classList.add('active');
+    });
+  });
+
+  // Handle hash for direct link to register
+  if (location.hash === '#register') {
+    tabs[0].classList.remove('active');
+    tabs[1].classList.add('active');
+    forms[0].classList.remove('active');
+    forms[1].classList.add('active');
+  }
+
+  function showMsg(el, text, type) {
+    el.textContent = text;
+    el.className = 'auth-msg ' + type;
+  }
+
+  // Login
+  document.getElementById('login-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const msg = document.getElementById('login-msg');
+    msg.className = 'auth-msg';
+    try {
+      const cred = await signInWithEmailAndPassword(auth, document.getElementById('login-email').value, document.getElementById('login-password').value);
+      const snap = await getDoc(doc(db, 'users', cred.user.uid));
+      if (snap.exists() && snap.data().status === 'approved') {
+        showMsg(msg, 'Login successful.', 'success');
+      } else {
+        showMsg(msg, 'Account pending approval.', 'error');
+        await auth.signOut();
+      }
+    } catch (err) {
+      showMsg(msg, err.message, 'error');
+    }
+  });
+
+  // Register
+  document.getElementById('register-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const msg = document.getElementById('reg-msg');
+    msg.className = 'auth-msg';
+    const name = document.getElementById('reg-name').value;
+    const email = document.getElementById('reg-email').value;
+    const password = document.getElementById('reg-password').value;
+    const skillLevel = document.getElementById('reg-skill').value;
+    try {
+      const cred = await createUserWithEmailAndPassword(auth, email, password);
+      await setDoc(doc(db, 'pending_users', cred.user.uid), {
+        name, email, skillLevel, status: 'pending'
+      });
+      showMsg(msg, 'Registration submitted. Awaiting approval.', 'success');
+    } catch (err) {
+      showMsg(msg, err.message, 'error');
+    }
+  });
+</script>
+</body>
+</html>
